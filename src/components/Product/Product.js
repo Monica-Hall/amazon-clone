@@ -19,10 +19,13 @@ function Product({title, image, price, rating}) {
 
                 {/* RATING */}
                 <div className="product_rating">
-                {/* <p> {"⭐".repeat(rating)}</p> */}
-                {Array(rating).fill().map((_, i) => (
+                <p> {"⭐".repeat(rating)}</p>
+
+                {/* this code does the same thing as above */}
+                {/* {Array(rating).fill().map((_, i) => (
                 <p>⭐</p>
-                ))}
+                ))} */}
+                
                 </div>
 
             </div>
