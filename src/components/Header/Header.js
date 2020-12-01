@@ -1,37 +1,46 @@
 import React from 'react'; 
 import "./Header.css"; 
+import SearchIcon from '@material-ui/icons/Search';
+import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 
 function Header() {
     return (
         <div className="header">
             <img 
-                className="header__logo" 
+                className="header_logo" 
                 src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
                 alt="" 
             />
 
-            <div className="header__search">
+            <div className="header_search">
                 <input 
-                    className="header__searchInput" 
+                    className="header_searchInput" 
                     type="text"/>
+                    <SearchIcon
+                    className="header_searchIcon" />
             </div>
 
-            <div className="header__nav">
+            <div className="header_nav">
                 {/* Option 1  */}
-                <div className="header__options">
-                    <span className="header__optionLineOne">Hello</span>
+                <div className="header_options">
+                    <span className="header_optionLineOne">Hello</span>
 
-                    <span className="header__optionLineTwo">Sign In</span>
+                    <span className="header_optionLineTwo">Sign In</span>
                 </div>
                 {/* Option 2 */}
-                <div className="header__options">
-                    <span className="header__optionLineOne">Returns</span>
-                    <span className="header__optionLineTwo">& Orders</span>
+                <div className="header_options">
+                    <span className="header_optionLineOne">Returns</span>
+                    <span className="header_optionLineTwo">& Orders</span>
                 </div>
                 {/* Option 3 */}
-                <div className="header__options">
-                    <span className="header__optionLineOne">Your</span>
-                    <span className="header__optionLineTwo">Prime</span>
+                <div className="header_options">
+                    <span className="header_optionLineOne">Your</span>
+                    <span className="header_optionLineTwo">Prime</span>
+                </div>
+
+                <div className="header_basket">
+                    <ShoppingBasketIcon />
+                    <span className="header_optionLineTwo header_basketCount">0</span>
                 </div>
 
             </div>
