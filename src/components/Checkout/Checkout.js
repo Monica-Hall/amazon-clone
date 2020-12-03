@@ -3,8 +3,13 @@ import "./Checkout.css";
 
 export default function Checkout() {
     return (
-        <div>
-            <h1>I am the checkout page</h1>
+        <div className="checkout">
+            <div className="checkout_left">
+
+                {/* <img className="checkout_ad" src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Home/HF/minions/Web-banner1.gif" alt="" /> */}
+
+                <img className="checkout_ad" src="https://images-na.ssl-images-amazon.com/images/G/01/credit/img16/CCMP/newstorefront/YACC-desktop-nonprime-banner2.jpg" alt="" />
+            </div>
         </div>
     )
 }

@@ -9,15 +9,17 @@ function App() {
   return (
     <Router>
       <div className="App">
+        
+        {/* RENDERS AT ALL TIMES */}
+        <Header />
+
         <Switch>
 
         <Route exact path="/">
-            <Header />
             <Home />
           </Route>
 
           <Route exact path="/checkout">
-            <Header />
             <Checkout />
           </Route>
 
