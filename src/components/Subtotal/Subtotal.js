@@ -1,36 +1,37 @@
 import React from 'react'; 
 import "./Subtotal.css"; 
 import CurrencyFormat from "react-currency-format"; 
+import {useStateValue} from '../../ducks/reducer/StateProvider'; 
+import {getBasketTotal} from '../../ducks/reducer/reducer'; 
+import {useHistory} from 'react-router-dom'; 
 
 function Subtotal() {
+    const history = useHistory();
+    const [{ basket }] = useStateValue();
+  
     return (
-        <div className="subtotal">
-            {/* <CurrencyFormat 
-            renderText={(value) => (
-                <>
-                    <p>
-                        Subtotal({basket.length} itmes):
-                        <strong>{`${value}`}</strong>
-                    </p>
-
-                    <small className="subtotal_gift">
-                        <input type="checkout" />
-                        This order contains a gift
-                    </small>
-                </>
-            )}
-
-            decimalScale={2}
-            value={getBasketTotal(basket)}
-            diplayType={"text"}
-            thousandSeprator={true}
-            prefix={"$"}
-            /> */}
-            <h1>Subtotal (0 items): $0.00</h1>
-
-            <button><strong>Proceed to checkout</strong></button>
-        </div>
-    )
-}
-
-export default Subtotal
+      <div className="subtotal">
+        <CurrencyFormat
+          renderText={(value) => (
+            <>
+              <p>
+                Subtotal ({basket.length} items): <strong>{value}</strong>
+              </p>
+              <small className="subtotal__gift">
+                <input type="checkbox" /> This order contains a gift
+              </small>
+            </>
+          )}
+          decimalScale={2}
+          value={getBasketTotal(basket)} 
+          displayType={"text"}
+          thousandSeparator={true}
+          prefix={"$"}
+        />
+  
+        <button onClick={e => history.push('/payment')}>Proceed to Checkout</button>
+      </div>
+    );
+  }
+  
+  export default Subtotal;
