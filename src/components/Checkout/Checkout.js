@@ -1,8 +1,12 @@
 import React from 'react'
 import "./Checkout.css"; 
 import Subtotal from "../Subtotal/Subtotal"; 
+import { useStateValue } from "../../ducks/reducer/StateProvider"; 
+import CheckoutProduct from "../CheckoutProduct/CheckoutProduct"; 
 
 export default function Checkout() {
+    const [{basket}] = useStateValue(); 
+
     return (
         <div className="checkout">
             <div className="checkout_left">
@@ -13,6 +17,18 @@ export default function Checkout() {
 
                 <div>
                     <h2 className="checkout_title">Shopping Cart</h2>
+
+                    {/* CART ITEMS */}
+                    {basket.map(item => (
+                        <CheckoutProduct
+                        id={item.id}
+                        title={item.title}
+                        image={item.image}
+                        price={item.price}
+                        rating={item.rating}
+                        />
+                    ))}
+
                 </div> 
 
             </div>

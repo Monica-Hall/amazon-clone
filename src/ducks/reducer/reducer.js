@@ -1,5 +1,3 @@
-import { Add } from "@material-ui/icons";
-
 export const initialState = {
     basket: [], 
 
@@ -22,24 +20,25 @@ const reducer = (state, action) => {
                 basket: []
             }
 
-        case "REMOVE":
-            const index = state.basket.findIndexOf(
+        case "REMOVE_FROM_CART":
+            const index = state.basket.findIndex(
                 (basketItem) => basketItem.id === action.id
-            ); 
-            
-            let newBasket = [...state.basket]; 
-
-            if(index >= 0) {
-                newBasket.splice(index, 1); 
-            } else {
+              );
+              let newBasket = [...state.basket];
+        
+              if (index >= 0) {
+                newBasket.splice(index, 1);
+        
+              } else {
                 console.warn(
-                    `Cannot remove product (id: ${action.id}) as it is not in your cart!`
+                  `Cannot remove product (id: ${action.id}) as it iss not in your cart!`
                 )
-            }
-            return {
-                ...state, 
+              }
+        
+              return {
+                ...state,
                 basket: newBasket
-            }
+              }
 
             case "SET_USER": 
             return {
