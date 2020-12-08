@@ -9,12 +9,10 @@
     object-fit: contain;
     width: 180px; 
     height: 180px;
-    /* background-color: white; */
 }
 
 .checkoutProduct_info {
     padding-left: 20px;
-    /* background-color: white; */
 }
 
 .checkoutProduct_info > button {
