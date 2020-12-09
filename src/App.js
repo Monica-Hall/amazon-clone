@@ -2,6 +2,7 @@ import {React} from "react";
 import './App.css';
 import Header from "./components/Header/Header"; 
 import Home from "./components/Home/Home"; 
+import Login from "./components/Authentication/Login"; 
 import Checkout from "./components/Checkout/Checkout"; 
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"; 
 
@@ -10,16 +11,19 @@ function App() {
     <Router>
       <div className="App">
         
-        {/* RENDERS AT ALL TIMES */}
-        <Header />
-
         <Switch>
 
-        <Route exact path="/">
+          <Route exact path="/login">
+            <Login />
+          </Route>
+
+          <Route exact path="/">
+            <Header />  
             <Home />
           </Route>
 
           <Route exact path="/checkout">
+            <Header />
             <Checkout />
           </Route>
 

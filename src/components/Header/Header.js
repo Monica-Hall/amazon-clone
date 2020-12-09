@@ -30,11 +30,12 @@ function Header() {
             {/* Nav Bar */}
             <div className="header_nav">
                 {/* GREETING  AND SIGN IN OPTION */}
-                <div className="header_options">
-                    <span className="header_optionLineOne">Hello</span>
-
-                    <span className="header_optionLineTwo">Sign In</span>
-                </div>
+                <Link to="/login">
+                    <div className="header_options">
+                        <span className="header_optionLineOne">Hello</span>
+                        <span className="header_optionLineTwo">Sign In</span>
+                    </div>
+                </Link>
                 {/* RETUNS AND ORDERS  OPTION */}
                 <div className="header_options">
                     <span className="header_optionLineOne">Returns</span>
