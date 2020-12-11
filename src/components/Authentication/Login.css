@@ -48,3 +48,31 @@
     border: 1.5px solid darkgray; 
     border-radius: 5px;
 }
+
+.login_container > p {
+    margin-top: 15px; 
+    font-size: 12px; 
+}
+
+.signIn_button {
+    background-color: #F5D68D;
+    border-radius: 2px;
+    width: 100%; 
+    height: 30px;
+    border: 1px solid; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-color: #A98735 #9C7E31 #856A29;
+    color: #121212;
+    padding: 5px;
+}
+
+
+.register_button {
+    border-radius: 2px;
+    width: 100%; 
+    height: 30px; 
+    border: 1px solid; 
+    margin-top: 10px; 
+    border-color: darkgray;
+}
