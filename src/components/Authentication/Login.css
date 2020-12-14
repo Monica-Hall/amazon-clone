@@ -17,8 +17,13 @@
 
 .logo_line {
     margin-top: 10px;
-    margin-bottom: 15px;
-    color: lightgray;
+    background-color: transparent;
+    display: block;
+    height: 1px;
+    border-width: 0;
+    border-top: 1px solid #e7e7e7;
+    line-height: 19px;
+    margin-bottom: 14px;
 }
 
 .login_container {
@@ -42,7 +47,7 @@
 
 .login_container > form > input {
     height: 25px; 
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     background-color: white;
     width: 98%;
     border: 1.5px solid darkgray; 
@@ -56,7 +61,7 @@
 
 .signIn_button {
     background-color: #F5D68D;
-    border-radius: 2px;
+    border-radius: 5px;
     width: 100%; 
     height: 30px;
     border: 1px solid; 
@@ -69,10 +74,43 @@
 
 
 .register_button {
-    border-radius: 2px;
+    border-radius: 5px;
     width: 100%; 
     height: 30px; 
     border: 1px solid; 
     margin-top: 10px; 
-    border-color: darkgray;
+    border-color: rgb(92, 50, 50);
+}
+
+
+.grey_bottom {
+    margin-top: 50px;
+    width: 100%;
+    height: 60px;
+    /* background: linear-gradient(to top, #ffffff 0%, #f0f0f0 100%);  */
+    background: linear-gradient(to top, #ffffff 0%, #f7f7f7 100%);
+}
+
+.footer_top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    /* margin-bottom: 10px; */
+}
+
+.footer_top > p {
+    color: #0066c0;
+    font-size: 11px;
+    margin: 14px;
+    padding: 2px;
+}
+
+.footer_bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.footer_bottom {
+    font-size: 11px;
 }

@@ -1,21 +1,35 @@
 import React, {useState} from 'react'; 
 import "./Login.css"; 
-import {Link} from "react-router-dom";
+import {Link, useHistory}  from "react-router-dom";
+import {auth} from "../../firebase";
 
 function Login() {
-
+    const history = useHistory(); 
     const [email, setEmail] = useState(""); 
     const [password, setPassword] = useState(""); 
 
     const signIn = e => {
         e.preventDefault(); 
 
-
+        auth
+            .signInWithEmailAndPassword(email, password)
+            .then(auth => {
+                history.push("/"); 
+            })
+            .catch(error => alert(error.message)); 
     }
 
     const register = e => {
         e.preventDefault(); 
 
+        auth
+            .createUserWithEmailAndPassword(email, password)
+            .then((auth) => {
+                if(auth) {
+                    history.push("/"); 
+                }
+            })
+            .catch(error => alert(error.message)); 
     }
 
     return (
@@ -39,14 +53,28 @@ function Login() {
                 </form>
 
                 <small className="login_checkbox">
-                <input type="checkbox" /> Keep me signed-in. 
-              </small>
+                    <input type="checkbox" /> Keep me signed-in. 
+                </small>
 
                 <p>
-                    By signing-in, you agree to <b>Amazon's Clone Conditions of Use & Sale</b>. Please see our Privacy Notice, our Cookies Notice, and our Interest-Based Ads Notice. 
+                    By signing-in, you agree to <b>Amazon's Clone</b> Conditions of Use & Sale. Please see our Privacy Notice, our Cookies Notice, and our Interest-Based Ads Notice. 
                 </p>
 
                 <button onClick={register} className="register_button">Create your Amazon Account</button>
+
+            </div>
+
+            <div className="grey_bottom">
+
+                <div className="footer_top">
+                    <p>Conditions of Use</p>
+                    <p>Privacy Notice</p>
+                    <p>Help</p>
+                </div>     
+
+                <div className="footer_bottom">
+                    <p>© 1996-2020, AmazonClone.com, Inc. or its affiliates</p>
+                </div>
 
             </div>
         </div>
