@@ -15,7 +15,7 @@ export default function Checkout() {
 
                 <img className="checkout_ad" src="https://images-na.ssl-images-amazon.com/images/G/01/credit/img16/CCMP/newstorefront/YACC-desktop-nonprime-banner2.jpg" alt="" />
 
-                <div>
+                <div className="checkout_container"> 
                     <h2 className="checkout_title">Shopping Cart</h2>
 
                     {/* CART ITEMS */}

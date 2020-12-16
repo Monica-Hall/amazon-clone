@@ -1,0 +1,39 @@
+[debug] [2020-12-16T21:39:02.597Z] ----------------------------------------------------------------------
+[debug] [2020-12-16T21:39:02.600Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2020-12-16T21:39:02.601Z] CLI Version:   8.18.1
+[debug] [2020-12-16T21:39:02.601Z] Platform:      darwin
+[debug] [2020-12-16T21:39:02.601Z] Node Version:  v12.16.1
+[debug] [2020-12-16T21:39:02.606Z] Time:          Wed Dec 16 2020 14:39:02 GMT-0700 (Mountain Standard Time)
+[debug] [2020-12-16T21:39:02.606Z] ----------------------------------------------------------------------
+[debug] [2020-12-16T21:39:02.606Z] 
+[debug] [2020-12-16T21:39:02.619Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-16T21:39:02.620Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/monicakes/projects/ecommerce
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[debug] [2020-12-16T21:39:14.541Z] Error: write EIO
+    at afterWriteDispatched (internal/stream_base_commons.js:154:25)
+    at writeGeneric (internal/stream_base_commons.js:145:3)
+    at WriteStream.Socket._writeGeneric (net.js:780:11)
+    at WriteStream.Socket._write (net.js:792:8)
+    at doWrite (_stream_writable.js:441:12)
+    at writeOrBuffer (_stream_writable.js:425:5)
+    at WriteStream.Writable.write (_stream_writable.js:316:11)
+    at EventEmitter.signalExit.alwaysLast (/usr/local/lib/node_modules/firebase-tools/node_modules/restore-cursor/index.js:7:18)
+    at EventEmitter.emit (events.js:311:20)
+    at EventEmitter.emit (domain.js:482:12)
+    at emit (/usr/local/lib/node_modules/firebase-tools/node_modules/signal-exit/index.js:78:11)
+    at process.listener (/usr/local/lib/node_modules/firebase-tools/node_modules/signal-exit/index.js:94:7)
+    at process.emit (events.js:311:20)

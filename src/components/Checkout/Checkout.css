@@ -9,9 +9,13 @@
     margin-bottom: 10px;
 }
 
+.checkout_container {
+    background-color: white;
+}
+
 .checkout_title {
     padding: 10px; 
-    border-bottom: 1px solid lightgray;
+    border-bottom: 5px solid #EBEDED;
     background-color: white;
 }
 
