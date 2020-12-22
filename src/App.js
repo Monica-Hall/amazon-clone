@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Home from "./components/Home/Home"; 
 import Login from "./components/Authentication/Login"; 
 import Checkout from "./components/Checkout/Checkout"; 
+import Payment from "./components/Payment/Payment"; 
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"; 
 import {auth} from "./firebase"; 
 import {useStateValue} from "./ducks/reducer/StateProvider"; 
@@ -47,6 +48,11 @@ function App() {
           <Route exact path="/checkout">
             <Header />
             <Checkout />
+          </Route>
+
+          <Route exact path="/payment">
+            <Header />
+            <Payment />
           </Route>
 
         </Switch>
