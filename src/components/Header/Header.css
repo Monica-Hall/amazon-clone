@@ -40,6 +40,10 @@
     justify-content: space-evenly;
 }
 
+.header_nav > a {
+    text-decoration: none;
+}
+
 .header_options {
     display: flex;
     flex-direction: column;

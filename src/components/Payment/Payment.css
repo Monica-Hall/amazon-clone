@@ -1,0 +1,28 @@
+.paymentContainer > h1 {
+    text-align: center;
+    padding: 20px; 
+    margin: 0 20px;
+    font-weight: 400;
+    background-color:#EBEDED;
+    /* border-bottom: 5px solid #EBEDED; */
+}
+
+.paymentContainer > h1 a {
+    text-decoration: none;
+}
+
+.paymentSection {
+    display: flex;
+    background-color: white;
+    margin: 0 20px;
+    padding: 20px;
+    border-bottom: 5px solid #EBEDED;
+}
+
+.paymentTitle {
+    flex: .2;
+}
+
+.paymentAddress, .paymentItems, .paymentDetails {
+    flex: .8;
+}
