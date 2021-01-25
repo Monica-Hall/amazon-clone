@@ -5,6 +5,7 @@ import Home from "./components/Home/Home";
 import Login from "./components/Authentication/Login"; 
 import Checkout from "./components/Checkout/Checkout"; 
 import Payment from "./components/Payment/Payment"; 
+import Orders from "./components/Orders/Orders"; 
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"; 
 import {auth} from "./firebase"; 
 import {useStateValue} from "./ducks/reducer/StateProvider"; 
@@ -43,6 +44,11 @@ function App() {
 
           <Route exact path="/login">
             <Login />
+          </Route>
+
+          <Route exact path="/orders">
+            <Header />
+            <Orders />
           </Route>
 
           <Route exact path="/">
