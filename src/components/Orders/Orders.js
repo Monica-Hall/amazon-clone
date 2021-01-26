@@ -1,6 +1,8 @@
-import React, {useState} from 'react'; 
+import React, {useState, useEffect} from 'react'; 
 import { useStateValue } from '../../ducks/reducer/StateProvider';
 import "./Orders.css"; 
+import Order from "../Order/Order"; 
+import {db} from "../../firebase"; 
 
 function Orders() {
 
