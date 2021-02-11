@@ -73,7 +73,7 @@ function Login() {
                 </div>     
 
                 <div className="footer_bottom">
-                    <p>© 1996-2020, AmazonClone.com, Inc. or its affiliates</p>
+                    <p>© 1996-2021, AmazonClone.com, Inc. or its affiliates</p>
                 </div>
 
             </div>
