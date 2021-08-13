@@ -26,6 +26,7 @@ function Header() {
                     alt="" 
                 />
             </Link>
+
             {/* Search Bar and Icon */}
             <div className="header_search">
                 <input 
@@ -34,7 +35,8 @@ function Header() {
                     <SearchIcon
                     className="header_searchIcon" />
             </div>
-            {/* Nav Bar */}
+
+            {/* NAV BAR */}
             <div className="header_nav">
                 {/* GREETING  AND SIGN IN OPTION */}
                 <Link to={!user && '/login'}>
@@ -43,7 +45,7 @@ function Header() {
                         <span className="header_optionLineTwo">{user ? 'Sign Out' : 'Sign In'}</span>
                     </div>
                 </Link>
-                {/* RETUNS AND ORDERS  OPTION */}
+                {/* RETUNS AND ORDERS OPTION */}
                 <div className="header_options">
                     <span className="header_optionLineOne">Returns</span>
                     <span className="header_optionLineTwo">& Orders</span>
